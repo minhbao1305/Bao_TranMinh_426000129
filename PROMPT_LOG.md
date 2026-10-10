@@ -19,7 +19,13 @@ Phần Dự án (Projects) sẽ tự động chia thành 3 cột bằng CSS Grid
 Bạn có thể mở file html trên trình duyệt và thử co giãn kích thước cửa sổ để xem sự thay đổi Responsive nhé!
 ### Lần 2: Tích hợp thư viện Animate.css & AOS
 Hãy nhúng thư viện Animate.css vào thẻ <head> của file index.html qua CDN. Sau đó, thêm các class animate__animated animate__fadeInDown vào phần Header và animate__zoomIn vào nút bấm CTA chính ở Hero Section để tạo ấn tượng khi vừa truy cập trang.
-### Lần 3: Giao diện Dark/Ligt Mode
+### Lần 3
+Viết CSS cho các thanh tiến trình (Progress bars) thể hiện mức độ kỹ năng (HTML 90%, CSS 85%, JS 75%). Khi trang web vừa tải xong, thanh màu bên trong sẽ tự động chạy từ 0% đến phần trăm mục tiêu trong 2 giây bằng @keyframes và giữ nguyên trạng thái bằng animation-fill-mode: forwards
+### Lần 4: Tạo hiệu ứng lật thẻ
+Tạo hiệu ứng lật thẻ 3D cho các Card dự án bằng CSS
+. Mặt trước hiển thị hình ảnh dự án và tiêu đề; khi hover vào, thẻ sẽ xoay 180 độ theo trục Y lộ ra mặt sau chứa mô tả công nghệ và nút 'Xem Demo'
+. Sử dụng transform-style: preserve-3d; và backface-visibility: hidden; để hiệu ứng mượt mà
+### Lần 5: Giao diện Dark/Ligt Mode
 hãy tạo tính năng chuyển đổi giao diện Sáng/Tối (Light/Dark Mode) hoàn toàn bằng HTML & CSS thuần (không sử dụng JavaScript) theo yêu cầu sau:
 Cấu trúc HTML:
 Sử dụng 1 thẻ <input type="checkbox" id="theme-toggle" hidden> ẩn.
@@ -29,6 +35,10 @@ Khai báo bộ biến CSS tại :root cho giao diện Sáng (--bg-color, --text-
 Sử dụng CSS selector khi checkbox được tích :checked (#theme-toggle:checked ~ .wrapper hoặc :checked cấp cha) để đổi giá trị các biến :root sang tông màu Tối.
 Chuyển đổi Icon: Khi ở chế độ Sáng thì hiện icon Mặt trăng 🌙 (ẩn Mặt trời ☀️); khi bấm chuyển sang Tối (:checked) thì ẩn Mặt trăng 🌙 và hiện icon Mặt trời ☀️.
 Bổ sung transition: all 0.3s ease; để màu nền, màu chữ và icon chuyển đổi mượt mà.
+### Lần 6: Menu
+Ở giao diện Mobile, Menu biến mất vàthay bằng biểu tượng "3 gạch" (Hamburger Menu). Biến đổi biểu tượng 3 gạch ngang thành dấu "X" một cách mượt mà khi người dùng mở Menu (Sử dụng CSS Transitions).Yêu cầu viết bằng CSS, không dùng javascripts. Trên Desktop Menu nằm giữa màn hình.
+### Lần 7: Nút tin nhăn
+bỏ nút "Liên hệ với tôi" thay vào đó hãy tạo một nút tròn cố định ở góc dưới bên phải màn hình (position: fixed) chứa biểu tượng tin nhắn. Sử dụng CSS @keyframes pulse để tạo hiệu ứng 'phập phồng' co giãn từ scale(1) lên scale(1.1) liên tục và lan tỏa bóng nhẹ để thu hút sự chú ý.
 ## 3. Đánh giá cá nhân về quá trình Vibe Coding
 - AI đã giúp bạn tiết kiệm thời gian ở phần nào nhất?
 AI đã giúp bạn tiết kiệm thời gian ở phần Giao diện Dark/Ligt Mode
