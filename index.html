@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ Sơ Cá Nhân</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Checkbox Hack cho Light/Dark Mode -->
+    <input type="checkbox" id="theme-toggle" hidden>
+    <div class="theme-wrapper">
+
+    <header class="animate__animated animate__fadeInDown">
+        <div class="logo" style="display: flex; align-items: center; gap: 0.6rem;">
+            <!-- SVG Logo (Biểu tượng xếp lớp Isometric) -->
+            <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="36" height="36">
+                <defs>
+                    <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <!-- Lấy màu trực tiếp từ biến CSS Theme -->
+                        <stop offset="0%" stop-color="var(--primary-color)" />
+                        <stop offset="100%" stop-color="var(--primary-glow)" />
+                    </linearGradient>
+                </defs>
+                <!-- Lớp 1 (Trên cùng) -->
+                <path d="M20 2L2 12l18 10 18-10L20 2zm0 14.5L6.5 10 20 5.5 33.5 10 20 16.5z" fill="url(#logo-grad)"/>
+                <!-- Lớp 2 (Giữa) -->
+                <path d="M2 16.5v5L20 31.5l18-10v-5L20 26.5 2 16.5z" fill="url(#logo-grad)" opacity="0.8"/>
+                <!-- Lớp 3 (Dưới cùng) -->
+                <path d="M2 23.5v5L20 38.5l18-10v-5L20 33.5 2 23.5z" fill="url(#logo-grad)" opacity="0.4"/>
+            </svg>
+            
+        </div>
+        <!-- Checkbox Hack cho Mobile Menu -->
+        <input type="checkbox" id="menu-toggle" hidden>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#skills">Kỹ năng</a></li>
+                <li><a href="#projects">Dự án</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </nav>
+        
+        <div class="header-controls">
+            <!-- Nút Chuyển Đổi Theme -->
+            <label for="theme-toggle" class="theme-switch" aria-label="Chuyển đổi giao diện Sáng/Tối">
+                <span class="icon-sun">☀️</span>
+                <span class="icon-moon">🌙</span>
+            </label>
+            
+            <!-- Nút Hamburger Mobile -->
+            <label for="menu-toggle" class="hamburger" aria-label="Mở/Đóng Menu">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="about" class="hero">
+            <div class="hero-title-wrapper">
+                <h2 class="typing-text">Xin chào, tôi là Web Developer</h2>
+                <h2 class="typing-text-hidden" aria-hidden="true">Xin chào, tôi là Web Developer</h2>
+            </div>
+            <p>Chào mừng đến với hồ sơ năng lực của tôi! Tôi chuyên thiết kế và xây dựng các ứng dụng web tương thích, dễ tiếp cận và hiệu suất cao.</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Kỹ năng của tôi</h2>
+            <div class="skills-container">
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>HTML5</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill html-progress"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>CSS3</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill css-progress"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>JavaScript</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill js-progress"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Dự án tiêu biểu</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-img-placeholder">Ảnh Dự án Alpha</div>
+                            <h3>Dự án Alpha</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Dự án thể hiện kỹ năng của tôi về Semantic HTML và CSS hiện đại.</p>
+                            <a href="#" class="demo-btn">Xem Demo</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-img-placeholder">Ảnh Dự án Beta</div>
+                            <h3>Dự án Beta</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Ứng dụng web tương tác được xây dựng bằng React và backend API RESTful.</p>
+                            <a href="#" class="demo-btn">Xem Demo</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-img-placeholder">Ảnh Dự án Gamma</div>
+                            <h3>Dự án Gamma</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Trang đích tương thích thiết bị, tập trung tính tiếp cận và hiệu suất web.</p>
+                            <a href="#" class="demo-btn">Xem Demo</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Copyright. All rights reserved.</p>
+    </footer>
+
+    <!-- Nút Chat Cố Định -->
+    <a href="#contact" class="floating-chat-btn" aria-label="Nhắn tin cho tôi">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+        </svg>
+    </a>
+
+    </div> <!-- Đóng .theme-wrapper -->
+</body>
+</html>
